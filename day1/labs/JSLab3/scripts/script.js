@@ -10,12 +10,14 @@ prompt("What is your name?");
 
 //Let's try again
 let favMovie = prompt("What is your favorite movie?");
-
 console.log("Your favorite movie is", favMovie);
 
 /* Your turn 
 Ask the user a question.
 Print the result */
+let firstName = prompt("What is your first name?");
+let lastName = prompt("What is your last name?");
+console.log("Welcome to learning center : " + firstName +" "+ lastName);
 
 
 /*Exmaple
@@ -28,6 +30,10 @@ alert("Your favorite movie is "+ favMovie);
 Use alert to print 
 The result of your question is ___ 
 ___ is the actual result. */
+let favoriteCity = prompt("What is your favorite city?");
+let favoriteWeather = prompt("What is your weather?");
+alert(favoriteCity + " is your favorite city and you prefer " + favoriteWeather);
+
 
 /* Explanation
 alert, console.log, and prompt are all built in
