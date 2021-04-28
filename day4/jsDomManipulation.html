@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript DOM Manipulation</title>
+    </head>
+    <body>
+        <p id="pId"> This is a paragraph </p>
+
+        <h2> This is a header </h2>
+        <h2> This is a header </h2>
+        <h2> This is a header </h2>
+        <h2> This is a header </h2>
+
+        <span class="one"> span 1 </span>
+        <span class="one"> span 2 </span>
+
+        <div id="div1">
+
+        </div>
+
+        <script> 
+            var elem = document.getElementById("pId")
+            console.log("elem; ", elem);
+            // document.getElementsByTagName return an array 
+            // iterate trough the array to access specific item 
+            var h2Array = document.getElementsByTagName("h2")
+            console.log("h2Array; ", h2Array);
+            for (let i=0; i<h2Array.length; i++){
+                console.log(h2Array[i])
+            }
+
+            // document.getElementsByClassName will return an array 
+            // iterate trough the array to access specific item 
+            var spanArray = document.getElementsByClassName("one")
+            console.log("spanArray; ", spanArray);
+            for (let i=0; i<spanArray.length; i++){
+                console.log(spanArray[i])
+            }
+
+            // changing the innerHTML 
+
+            for (let i=0; i<h2Array.length; i++){
+                h2Array[i].innerHTML = "New content for all h2 tag"
+            }
+             elem.style.color = "green"
+
+            // ADD child to an element
+            // 4 or 3 steps 
+            var getElem = document.getElementById("div1")
+            var createNewElem = document.createElement("p")
+            createNewElem.innerHTML = "text for new element"
+            getElem.appendChild(createNewElem)
+        </script>
+    </body>
+</html>
