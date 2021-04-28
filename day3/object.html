@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Objects</title>
+        <script>
+            var person = {
+                name: "Adam",
+                age: 22,
+                nickname: "big Al",
+                favoriteColors: ["green", "red", "purple"],
+                talk: function(){
+                    console.log("Adam say hello my name is: ", this.name);
+                },
+
+                walk: function(spaces){
+                    console.log("Adam moved "+ spaces +" spaces.");
+                }
+            }
+
+            person.talk();
+            person.walk(55);
+            console.log("person.name : ", person.name) // property notation 
+            console.log("person['name']", person["name"]) // array notation
+        </script>
+    </head>
+    <body>
+        <p>Please open the consol to see the print out</p>
+
+    </body>
+</html>
